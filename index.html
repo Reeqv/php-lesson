@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Experience</title>
+</head>
+<body>
+    <style>
+        h1{
+            text-align: center;
+        }
+        li:first-child strong{
+            color:lightgreen;
+        }
+
+        p{
+            font-style: italic;
+        }
+
+        li{
+            outline: 2px solid black;
+            padding: 10px;
+            text-align: center;
+            margin: 10px;
+        }
+
+        ul{
+            list-style: none;            
+        }
+    </style>
+    
+    <?php    
+    $experience = [
+        'company' => ['Cheil', 'G-21', 'Hakimian Gem'],
+        'dates' => ['2021-настоящее время', '2008-2021', '1999-2000'],
+        'description' => ['Аналитика', 'Техническая поддержка', 'Редактирование фотографий'],
+    ];
+    ?>
+
+    <div class = "content">
+        <h1>Опыт работы</h1>
+        <ul class = "content__experience-list">
+            <li style = "content__experience-item">
+                <h2 class = "company"><?php echo $experience['company'][0]; ?></h2>
+                <strong class = "dates"><?php echo $experience['dates'][0]; ?></strong>
+                <p class = "desciption"><?php echo $experience['description'][0]; ?></p>
+            </li>
+            <li style = "content__experience-item">
+                <h2 class = "company"><?php echo $experience['company'][1]; ?></h2>
+                <strong class = "dates"><?php echo $experience['dates'][1]; ?></strong>
+                <p class = "desciption"><?php echo $experience['description'][1]; ?></p>
+            </li>
+            <li style = "content__experience-item">
+                <h2 class = "company"><?php echo $experience['company'][2]; ?></h2>
+                <strong class = "dates"><?php echo $experience['dates'][2]; ?></strong>
+                <p class = "desciption"><?php echo $experience['description'][2]; ?></p>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
